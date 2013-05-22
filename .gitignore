@@ -1,0 +1,12 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Intellij Files #
+.idea/
+java_files/
+out/
+*.iml
