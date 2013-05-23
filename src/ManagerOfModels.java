@@ -13,7 +13,7 @@ public class ManagerOfModels {
     }
 
     public void addClass(ModelClass mc) {
-
+        classes.put(mc.getName(), mc);
     }
 
     /*public void addMethod(ModelMethod mm) {

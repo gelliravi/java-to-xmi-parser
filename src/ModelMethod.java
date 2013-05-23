@@ -11,13 +11,15 @@ import java.util.List;
 public class ModelMethod {
 
     private String name;
-    private HashMap<String, ModelVariable> variables = new HashMap<String, ModelVariable>();
+    private HashMap<String, ModelVariable> variables;
     private String returnType;
 
     public ModelMethod(Name name, List<? extends VariableTree> params, List<StatementTree> localVariables, Tree returnType) {
         // Name
         this.name = name.toString();
-        // Parameters
+        // Initialize HashMap to store variables
+        variables = new HashMap<String, ModelVariable>();
+        // Parameter Variables
         for (VariableTree p : params) {
             ModelVariable mv = new ModelVariable(p.getName(), p.getType(), true);
             variables.put(mv.getName(), mv);

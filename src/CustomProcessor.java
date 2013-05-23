@@ -11,7 +11,7 @@ import java.util.Set;
 @SupportedAnnotationTypes("*")
 public class CustomProcessor extends AbstractProcessor {
 
-    private final CustomTreeVisitor visitor = new CustomTreeVisitor();
+    public final CustomTreeVisitor visitor = new CustomTreeVisitor();
     private Trees trees;
 
     @Override
