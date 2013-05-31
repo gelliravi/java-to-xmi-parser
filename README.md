@@ -21,4 +21,7 @@ Run:
 
 Example:
 
-    java -classpath "C:\Users\joshua\Development\XMI Generator - Java;C:\Program Files\Java\jdk1.7.0_21\lib\tools.jar" XMIGenerator java_files
+    java -classpath "C:\Users\joshua\Development\XMI Generator - Java;C:\Program Files\Java\jdk1.7.0_21\lib\tools.jar" XMIGenerator java-project
+
+## Notes
+This tool will attempt to compile the provided source code file(s), so if any compilation errors occur, the program will exit and display the errors.
