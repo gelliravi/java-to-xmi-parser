@@ -83,6 +83,7 @@ public class DOMWriter {
         // Generate classes
         for (ModelClass mc : classes.values()) {
             Element c = generateClass(mc);
+            if (mc.isInterface()) c.setAttribute("xmi:type", "uml:Interface"); // Overwrite 'xmi:type' that was set in 'generateClass()'
             // If it extends another class, setup the association as a generalization
             if (mc.getExtendedSuperClass() != null) generateGeneralization(c, mc.getExtendedSuperClass());
             // Set an interfaceRealization for each interface this class inherits
@@ -236,7 +237,7 @@ public class DOMWriter {
         return e;
     }
 
-    // Generate a packagedElement with the class name of type uml:Class
+    // Generate a packagedElement of type uml:Class
     private Element generateClass(ModelClass mc) {
         Element classElement = pElement("uml:Class");
         classElement.setAttribute("name", mc.getName());
