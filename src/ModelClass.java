@@ -86,7 +86,7 @@ public class ModelClass {
         if (mtString.contains("public")) return "public";
         if (mtString.contains("package")) return "package";
         System.out.print("WARNING: Unrecognized visibility for class '" + this.name + "'. ");
-        System.out.print("Found: " + mt.toString() + ". ");
+        System.out.print("Found: '" + mt.toString() + "'. ");
         System.out.print("UML only supports 'package', 'public', 'protected', or 'private'. ");
         System.out.println("Defaulting to 'public'.");
         return "public";

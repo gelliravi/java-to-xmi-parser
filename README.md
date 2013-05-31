@@ -17,4 +17,8 @@
 ## Execution
 Run:
 
-	java XMIGenerator folder_name
+	java -classpath "PATH_TO_CLASS_FILES;PATH_TO_TOOLS.JAR" XMIGenerator FOLDER_NAME
+
+Example:
+
+    java -classpath "C:\Users\joshua\Development\XMI Generator - Java;C:\Program Files\Java\jdk1.7.0_21\lib\tools.jar" XMIGenerator java_files
