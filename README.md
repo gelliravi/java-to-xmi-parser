@@ -24,4 +24,5 @@ Example:
     java -classpath "C:\Users\joshua\Development\XMI Generator - Java;C:\Program Files\Java\jdk1.7.0_21\lib\tools.jar" XMIGenerator java-project
 
 ## Notes
-This tool will attempt to compile the provided source code file(s), so if any critical compilation errors occur, the program will exit and display the errors. If any non-critical compilation errors occur, the program will continue and attempt to create an XMI file, but the resulting XMI file may not be 100% correct.
+* This tool will attempt to compile the provided source code file(s), so if any critical compilation errors occur, the program will exit and display the errors. If any non-critical compilation errors occur, the program will continue and attempt to create an XMI file, but the resulting XMI file may not be 100% correct.
+* Many non-critical compilation errors will occur if your software relies on external libraries for which only .class files or .jar files are available. The resulting XMI file will be correct, but will lack detailed information for classes contained within the external libraries.
