@@ -7,6 +7,10 @@
 
 # Intellij Files #
 .idea/
-java_files/
 out/
 *.iml
+
+# Testing Files #
+java_files/
+*.ump
+*.xmi
