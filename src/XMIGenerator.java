@@ -52,7 +52,7 @@ public class XMIGenerator {
             System.out.println(">> Finished processing sources.");
 
             // Determine output file name
-            /*System.out.print("Enter a filename for the output XMI file: ");
+            System.out.print("Enter a filename for the output XMI file: ");
             Scanner input = new Scanner(System.in);
             String outputFilename = input.next();
 
@@ -60,12 +60,11 @@ public class XMIGenerator {
             if (outputFilename.length() < 3) outputFilename += ".xmi";
             String fileExtension = outputFilename.substring(outputFilename.length() - 4, outputFilename.length());
             if (!fileExtension.equalsIgnoreCase(".xmi")) outputFilename += ".xmi";
-            System.out.println("Output filename: " + outputFilename);*/
+            System.out.println("Output filename: " + outputFilename);
 
             // Write to output file
             System.out.println(">>> Generating XMI file...");
-            //DOMWriter dom = new DOMWriter(proc.visitor.idManager, proc.visitor.classes, outputFilename);
-            new DOMWriter(proc.visitor.idManager, proc.visitor.classes, "test.xmi");
+            new DOMWriter(proc.visitor.idManager, proc.visitor.classes, outputFilename);
         } catch (IOException ex) {
             System.out.println("ERROR: File IO Exception");
             System.out.println(ex.getMessage());
